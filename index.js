@@ -13,9 +13,9 @@ const config = {
     password: '1234',
     port: 5432,
     max: 20,
-    min: 0, // consultar dejar en 0 o eliminar
+    min: 0, 
     idleTimeoutMillis: 5000,
-    connectionTimeoutMillis: 2000, //consultar valor
+    connectionTimeoutMillis: 2000, 
 }
 const pool = new Pool(config)
 

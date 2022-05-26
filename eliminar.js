@@ -1,5 +1,4 @@
 const args = process.argv.slice(2)
-
 const ingresoRut = args[1]
 
 async function eliminar(client, release, pool) {

@@ -1,5 +1,4 @@
 const args = process.argv.slice(2)
-
 const ingresoNombre = args[1]
 const ingresoRut = args[2]
 const ingresoCurso = args[3]
