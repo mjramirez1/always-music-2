@@ -4,7 +4,7 @@ const ingresoRut = args[1]
 
 async function eliminar(client, release, pool) {
     const eliminar = {
-       // rowMode: 'array',
+        rowMode: 'array',
         name: 'eliminarEstudiante',
         text: 'DELETE FROM estudiantes WHERE rut = $1 RETURNING *;',
         values: [ingresoRut]
@@ -14,7 +14,7 @@ async function eliminar(client, release, pool) {
         if (errorConsulta) {
             console.error('Error al eliminar datos', errorConsulta.code)
         } else {
-            console.log('El estudiante ha sido eliminado correctamente', res.rows)
+            console.log('El estudiante ha sido eliminado correctamente', res.rows[0])
             release()
             pool.end()
         }

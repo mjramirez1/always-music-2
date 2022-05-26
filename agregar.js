@@ -16,7 +16,7 @@ async function agregar(client, release, pool) {
         if (errorConsulta) {
             console.error('Error en su consulta, vuelva a ingresar datos', errorConsulta.code)
         } else {
-            console.log('Ultimo registro agregado: ', res.rows[0])
+            console.log('Estudiante agregado con éxito', res.rows[0])
             release()
             pool.end()
         }
